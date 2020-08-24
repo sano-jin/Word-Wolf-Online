@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+:root {
+    --dark-color-a: #667aff;
+    --dark-color-b: #7386ff;
+    --light-color: #e6e9ff;
+    --success-color: #5cb85c;
+    --error-color: #d9534f;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background: var(--light-color);
+    margin: 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    cursor: pointer;
+    padding: 5px 15px;
+    margin: 10px;
+    background: var(--light-color);
+    color: var(--dark-color-a);
+    border: 0;
+    border-radius: 5px;
+    font-size: 17px;
+}
+
+.room-submit-btn {
+    display: none;
+}
+
+/* Page Top */
+#log {
+    font-size: 26px;
+    color: gray;
+    padding: 10px;
+    margin: 10px 0;
+    overflow-wrap: break-word;
+}
+
+#username-block {
+    display: inline-block;
+    font-size: 26px;
+    color: gray;
+    background: lightblue;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    overflow-wrap: break-word;
+}
+
+#point {
+    font-size: 25px;
+    color: gray;
+    padding: 10px;
+    margin: 10px 0;
+    margin-bottom: 15px;
+    background-color: white;
+    border-radius: 5px;
+    overflow-wrap: break-word;
+}
+
+/* Room Page */
+#room {
+    display: none; 
+}
+    
+.room-main {
+    display: block;
+}
+
+.room-main > #users-in-room > .onVote {
+    background: darkblue;
+    color: white;
+    cursor: pointer;
+}
+
+.room-main > #users-in-room > li{
+    color: #333;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    background: lightblue;
+    display: inline-block;
+    transition: 0.1s;
+}
+
+.room-main > #users-in-room > .onVote:hover{
+    background: #555;
+    color: white;
+}
+
+#timer {
+    text-align: center;
+    color: gray;
+    font-size: 30px;
+}
+
+.operation {
+    font-size: 30px;
+    margin: 0 auto;
+    display: block;
+    outline: none;
+}
+
+#redo-btn {
+    display: none;
+}
+
+#topic {
+    color: #444;
+    background: white;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    font-size: 30px;
+    text-align: center;
+    display: none;
+}   
+
+
+/* Chat Page */
+
+.room-container {
+    max-width: 1100px;
+    background: #fff;
+    margin: 30px auto;
+    overflow: hidden;
+}
+
+.user-container {
+    max-width: 1100px;
+    background: #fff;
+    margin: 30px auto;
+    overflow: hidden;
+}
+
+.rooms-container {
+    max-width: 1100px;
+    background: #fff;
+    margin: 30px auto;
+    overflow: hidden;
+}
+
+.room-header {
+    background: var(--dark-color-a);
+    color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Rooms */
+
+.rooms-header {
+    background: var(--dark-color-a);
+    color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.room-btn {
+    border-radius: 5px;
+    border: 1px solid lightblue;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    transition: 0.2s;
+}
+
+.isLocked {
+    background:darkred;
+}
+
+.isUnLocked {
+    cursor: pointer;
+}
+
+.isUnLocked:hover  {
+    background: #7af;
+    border: none;
+}
+
+.isUnLocked:hover *{
+    color: white;
+}
+
+.isUnLocked:hover>.room-users-list{
+    display: block;
+}
+
+.room-users-list {
+    display: none;
+    color: gray;
+    margin: 5px;
+}
+
+.room-name {
+    color: lightblue;
+    align-items: center;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+
+.room-main {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.room-main {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.chat-sidebar {
+    background: var(--dark-color-b);
+    color: #fff;
+    padding: 20px 20px 60px;
+    overflow-y: scroll;
+}
+
+.chat-sidebar h2 {
+    font-size: 20px;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.chat-sidebar h3 {
+    margin-bottom: 15px;
+}
+
+.chat-sidebar ul li {
+    padding: 10px 0;
+}
+
+.chat-messages {
+    padding: 30px;
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+.chat-messages .message {
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: var(--light-color);
+    border-radius: 5px;
+    overflow-wrap: break-word;
+}
+
+.chat-messages .message .meta {
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--dark-color-b);
+    opacity: 0.7;
+    margin-bottom: 7px;
+}
+
+.chat-messages .message .meta span {
+    color: #777;
+}
+
+.chat-form-container {
+    padding: 20px 30px;
+    background-color: var(--dark-color-a);
+}
+
+.chat-form-container form {
+    display: flex;
+}
+
+.chat-form-container input[type='text'] {
+    font-size: 16px;
+    padding: 5px;
+    height: 40px;
+    flex: 1;
+}
+
+/* Join Page */
+.join-container {
+    max-width: 500px;
+    margin: 80px auto;
+    color: #fff;
+}
+
+.join-header {
+    text-align: center;
+    padding: 20px;
+    background: var(--dark-color-a);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.join-main {
+    padding: 30px 40px;
+    background: var(--dark-color-b);
+}
+
+.join-main p {
+    margin-bottom: 20px;
+}
+
+.join-main .form-control {
+    margin-bottom: 20px;
+}
+
+.join-main label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.join-main input[type='text'] {
+    font-size: 16px;
+    padding: 5px;
+    height: 40px;
+    width: 100%;
+}
+
+.join-main select {
+    font-size: 16px;
+    padding: 5px;
+    height: 40px;
+    width: 100%;
+}
+
+.join-main .btn {
+    margin:0;
+    margin-top: 20px;
+    width: 100%;
+    outline: none;
+}
+
+@media (max-width: 700px) {
+    .room-main {
+	display: block;
+    }
+
+    .chat-sidebar {
+	display: none;
+    }
+}

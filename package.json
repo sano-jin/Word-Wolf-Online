@@ -1,0 +1,24 @@
+{
+    "name": "word-wolf-online",
+    "version": "1.0.0",
+    "description": "Word Wolf Online",
+    "main": "server.js",
+    "dependencies": {
+	"express": "^4.17.1",
+	"socket.io": "^2.3.0"
+    },
+    "devDependencies": {
+	"nodemon": "^2.0.4"	
+    },
+    "scripts": {
+	"dev": "nodemon server.js",
+	"start": "node server.js"
+    },
+    "repository": {
+	"type": "git",
+	"url": "git@gitlab.ueda.info.waseda.ac.jp:sano/word-wolf-online.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}
