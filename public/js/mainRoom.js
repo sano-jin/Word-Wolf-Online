@@ -105,3 +105,7 @@ socket.on('currentUsers', (db) => {
     roomsList.innerHTML = innerHTML;
     if( !isPlaying ) outputUsers(db, currentRoom);
 });
+
+window.onbeforeunload = () => {
+    if( !isPlaying ) socket.emit('stopGame');
+};

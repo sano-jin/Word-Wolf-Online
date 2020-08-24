@@ -93,3 +93,4 @@ function vote( id ) {
 	usersInRoom.children[ i ].classList.remove("onVote");
     }
 }
+

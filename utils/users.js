@@ -6,11 +6,23 @@ const db = {'Laguiole': {"users": [], "isLocked": false},
 // Join user to chat
 function userJoin(id, username, point) {
     const room = 'Laguiole';
-    const user = {id, username, "point": 0, "votedN": 0, "hasVoted": false, "property": "citizen"};
+    const user = {id,
+		  "username": escapeHTML(username),
+		  "point": 0,
+		  "votedN": 0,
+		  "hasVoted": false,
+		  "property": "citizen"};
     if(!db[room]) db[room].users = [];
     db[room].users.push(user);
     console.log(db);
     return user;
+}
+
+function escapeHTML(s) { 
+    return s.replace(/&/g, '&amp;')
+            .replace(/"/g, '&quot;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
 }
 
 // Get current user
