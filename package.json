@@ -1,7 +1,7 @@
 {
   "name": "word-wolf-online",
   "version": "1.0.0",
-  "description": "Word Wolf Online",
+  "description": "Online word wolf game platform",
   "main": "server.js",
   "dependencies": {
     "express": "^4.17.1",
