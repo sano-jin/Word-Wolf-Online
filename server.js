@@ -96,7 +96,7 @@ io.on('connection', socket => {
 	    console.log( "lock room ", room );
 	    io.emit('lockRoom', room );
 	    lockRoom(room, true);
-	    const endingTime = new Date().getTime() + 1000 * 60 * 0.2;
+	    const endingTime = new Date().getTime() + 1000 * 60 * 5;
 	    const usersInRoom = getRoomUsers(user.id);
 	    const wolf_i = Math.floor(Math.random() * usersInRoom.length);
 	    const topics = getTopics();
