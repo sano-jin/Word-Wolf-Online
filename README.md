@@ -1,6 +1,5 @@
 # Word Wolf Online
-
-Word Wolf Online
+My first attempt to use nodejs and socket.io.
 
 ## Environment
 Node.js, Express, Socket.io and Nodemon
